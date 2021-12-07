@@ -12,10 +12,9 @@ const userRoute = require('./src/routes/user.js');
 const loginRoute = require('./src/routes/login.js');
 const dashboardRoute = require('./src/routes/dasboard.js');
 const refreshToken = require('./src/routes/refreshToken.js');
-const urlMongo = 'mongodb+srv://admin:QvPCU2VnNi9YZXUp@cluster0.fuir5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-const mongoDbUrl = process.env.MONGODB_URL || urlMongo
-const isPort = process.env.PORT || 8080
 
+const mongoDbUrl = process.env.MONGODB_URL || 'mongodb+srv://admin:QvPCU2VnNi9YZXUp@cluster0.fuir5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const isPort = process.env.PORT || 5000
 const app = express();
 
 
@@ -45,6 +44,7 @@ app.use('/', loginRoute);
 app.use('/', refreshToken);
 app.use('/user', dashboardRoute);
 
-mongoose.connect(mongoDbUrl)
-.then(() => app.listen(isPort))
-.catch(err => console.log(err));
+mongoose.connect(mongoDbUrl, {useNewUrlParser: true})
+
+
+app.listen(isPort, () => console.log('success'))
