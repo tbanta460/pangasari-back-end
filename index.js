@@ -1,4 +1,4 @@
-require('dotenv').config()
+
 const express = require('express');
 const mongoose = require('mongoose');
 const multer = require('multer');
@@ -13,7 +13,7 @@ const loginRoute = require('./src/routes/login.js');
 const dashboardRoute = require('./src/routes/dasboard.js');
 const refreshToken = require('./src/routes/refreshToken.js');
 
-const mongoDbUrl = process.env.MONGODB_URL || 'mongodb+srv://admin:QvPCU2VnNi9YZXUp@cluster0.fuir5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const mongoDbUrl = process.env.MONGO_URI || 'mongodb+srv://admin:QvPCU2VnNi9YZXUp@cluster0.fuir5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const isPort = process.env.PORT || 5000
 const app = express();
 
