@@ -43,7 +43,7 @@ app.get('/', function(req, res, next) {
           app.use('/', loginRoute);
           app.use('/', refreshToken);
           app.use('/user', dashboardRoute);
-          res.send("Hi, It works!")  
+          next();
     });  
 app.use('/', userRoute);
 app.use('/', loginRoute);
