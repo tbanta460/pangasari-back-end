@@ -39,7 +39,7 @@ app.use(multer({storage:fileImage.fileStorage, filterFile:fileImage.filterFile})
 
 
 app.get('/', function(req, res, next) {  
-          res.status(200).send("Hi, It works!")  
+          res.send("Hi, It works!")  
     });  
 app.use('/', userRoute);
 app.use('/', loginRoute);
