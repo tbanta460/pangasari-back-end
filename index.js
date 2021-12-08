@@ -38,7 +38,9 @@ app.use('/image', express.static(path.join(__dirname, 'image')))
 app.use(multer({storage:fileImage.fileStorage, filterFile:fileImage.filterFile}).single('image'));
 
 
-
+app.get('/', function(req, res, next) {  
+          res.status(200).send("Hi, It works!")  
+    });  
 app.use('/', userRoute);
 app.use('/', loginRoute);
 app.use('/', refreshToken);
