@@ -14,8 +14,7 @@ const dashboardRoute = require('./src/routes/dasboard.js');
 const refreshToken = require('./src/routes/refreshToken.js');
 
 const mongoDbUrl = process.env.MONGO_URI || 'mongodb+srv://admin:QvPCU2VnNi9YZXUp@cluster0.fuir5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-const isPort = process.env.PORT || 8080;
-const isHtml = process.env.INDEX_HTML || "index.html"
+const isPort = process.env.PORT || 5000;
 const app = express();
 
 
@@ -40,9 +39,9 @@ app.use(multer({storage:fileImage.fileStorage, filterFile:fileImage.filterFile})
 
 
 if (process.env.NODE_ENV === "production"{
-      app.use(express.static(path.join(__dirname, 'build')));
+      app.use(express.static(path.join(__dirname, "build")));
       app.get("*", (req, res) => {
-        res.sendFile(path.join(__dirname,  "build", isHtml));
+        res.sendFile(path.join(__dirname,  "build", "index.html"));
       });
     }
 app.use('/', userRoute);
