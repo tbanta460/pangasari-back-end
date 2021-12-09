@@ -37,6 +37,13 @@ app.use((error, req, res, next) => {
 app.use('/image', express.static(path.join(__dirname, 'image')))
 app.use(multer({storage:fileImage.fileStorage, filterFile:fileImage.filterFile}).single('image'));
 
+
+if (process.env.NODE_ENV === "production"{
+      app.use(express.static(path.join(__dirname)));
+      app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "index.html"));
+      });
+    }
 app.use('/', userRoute);
 app.use('/', loginRoute);
 app.use('/', refreshToken);

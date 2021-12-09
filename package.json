@@ -4,8 +4,11 @@
   "description": "Bagian Back-end dalam membuat aplikasi website untuk murid",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "client": " npm start", "server": "nodemon index.js", 
+    "build": " npm run build"
   },
   "author": "T.Banta Karollah",
   "license": "ISC",
@@ -22,3 +25,5 @@
     "nodemon": "^2.0.14"
   }
 }
+
+
