@@ -43,6 +43,8 @@ app.use('/', refreshToken);
 app.use('/user', dashboardRoute);
 
 mongoose.connect(mongoDbUrl, {useNewUrlParser: true})
-
+if(process.env.NODE_ENV === "production"){
+    app.use(express.static("client/build"))
+}
 
 app.listen(isPort, () => console.log('success'))

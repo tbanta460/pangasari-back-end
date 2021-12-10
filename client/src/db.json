@@ -1,0 +1,116 @@
+{
+    "list": [
+        {
+            "name": "Kisaragi Chihaya",
+            "age": "21",
+            "kelas": "12",
+            "thnAjaran":"2017-2018",
+            "ttl": "25/02/1999 Jepang-Tokyo"
+        },
+        {
+            "name": "Hoshi Miki",
+            "age": "20",
+            "kelas": "12",
+            "thnAjaran": "2018-2019",
+            "ttl": "23/11/2000 Jepang-Kanagawa"
+        },
+        {
+            "name": "Shijou Takane",
+            "age": "23",
+            "kelas": "!2",
+            "thnAjaran": "2014-2015",
+            "ttl": "21/01/1997 Jepang-Kyoto"
+        },
+        {
+            "name": "Ganaha Hibiki",
+            "age": "21",
+            "kelas": "!2",
+            "thnAjaran": "2017-2018",
+            "ttl": "10/10/1999 Jepang-Okinawa"
+        },
+        {
+            "name": "Kisaragi Chihaya",
+            "age": "21",
+            "kelas": "12",
+            "thnAjaran":"2017-2018",
+            "ttl": "25/02/1999 Jepang-Tokyo"
+        },
+        {
+            "name": "Hoshi Miki",
+            "age": "20",
+            "kelas": "12",
+            "thnAjaran": "2018-2019",
+            "ttl": "23/11/2000 Jepang-Kanagawa"
+        },
+        {
+            "name": "Shijou Takane",
+            "age": "23",
+            "kelas": "!2",
+            "thnAjaran": "2014-2015",
+            "ttl": "21/01/1997 Jepang-Kyoto"
+        },
+        {
+            "name": "Ganaha Hibiki",
+            "age": "21",
+            "kelas": "!2",
+            "thnAjaran": "2017-2018",
+            "ttl": "10/10/1999 Jepang-Okinawa"
+        },
+        {
+            "name": "Kisaragi Chihaya",
+            "age": "21",
+            "kelas": "12",
+            "thnAjaran":"2017-2018",
+            "ttl": "25/02/1999 Jepang-Tokyo"
+        },
+        {
+            "name": "Hoshi Miki",
+            "age": "20",
+            "kelas": "12",
+            "thnAjaran": "2018-2019",
+            "ttl": "23/11/2000 Jepang-Kanagawa"
+        },
+        {
+            "name": "Shijou Takane",
+            "age": "23",
+            "kelas": "!2",
+            "thnAjaran": "2014-2015",
+            "ttl": "21/01/1997 Jepang-Kyoto"
+        },
+        {
+            "name": "Ganaha Hibiki",
+            "age": "21",
+            "kelas": "!2",
+            "thnAjaran": "2017-2018",
+            "ttl": "10/10/1999 Jepang-Okinawa"
+        },
+        {
+            "name": "Kisaragi Chihaya",
+            "age": "21",
+            "kelas": "12",
+            "thnAjaran":"2017-2018",
+            "ttl": "25/02/1999 Jepang-Tokyo"
+        },
+        {
+            "name": "Hoshi Miki",
+            "age": "20",
+            "kelas": "12",
+            "thnAjaran": "2018-2019",
+            "ttl": "23/11/2000 Jepang-Kanagawa"
+        },
+        {
+            "name": "Shijou Takane",
+            "age": "23",
+            "kelas": "!2",
+            "thnAjaran": "2014-2015",
+            "ttl": "21/01/1997 Jepang-Kyoto"
+        },
+        {
+            "name": "Ganaha Hibiki",
+            "age": "21",
+            "kelas": "!2",
+            "thnAjaran": "2017-2018",
+            "ttl": "10/10/1999 Jepang-Okinawa"
+        }
+    ]
+}

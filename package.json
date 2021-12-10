@@ -4,8 +4,12 @@
   "description": "Bagian Back-end dalam membuat aplikasi website untuk murid",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node index.js",
+    "client": "cd client && npm start"
   },
   "author": "T.Banta Karollah",
   "license": "ISC",
