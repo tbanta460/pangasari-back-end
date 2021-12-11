@@ -27,11 +27,11 @@ const Login = () => {
         const checkUser = async () => {
             const userId = await Cookies.get('user');
             if(userId !== undefined ) {
-                await Axios.get(`http://localhost:5000/login/${userId}`)
+                await Axios.get(`https://pangasari.herokuapp.com/login/${userId}`)
                 .then(user => {
                     if(user){
                         const isUser = user.data.data
-                        window.location.assign(`http://localhost:3000/user/dashboard/${isUser.firstName+"_"+isUser.lastName.split(" ").filter(e => e).join("_")}`)
+                        window.location.assign(`https://pangasari.herokuapp.com/user/dashboard/${isUser.firstName+"_"+isUser.lastName.split(" ").filter(e => e).join("_")}`)
                     }
                 })
                 .catch(error => console.log(error.response))
@@ -42,7 +42,7 @@ const Login = () => {
 
     const inRefresh = (refreshToken) => {
         return new Promise((resolve,reject) => {
-            Axios.post('http://localhost:5000/refresh', {token: refreshToken})
+            Axios.post('/refresh', {token: refreshToken})
             .then(respone => {
                 if(respone.data.success === false){
                     resolve(false)
@@ -80,7 +80,7 @@ const Login = () => {
 
     const requestLogin = async (accessToken, refreshToken) => {
         return new Promise((resolve,reject) => {
-            Axios.post('http://localhost:5000/user/dashboard',{userName}, {
+            Axios.post('https://pangasari.herokuapp.com/user/dashboard',{userName}, {
                 headers: {
                     'Authorization': `Bearer ${accessToken}`
                 }
@@ -100,7 +100,7 @@ const Login = () => {
                     const user = respone.data.data
                     await sendObj(user)
                     await Cookies.set('user', user._id);
-                    window.location.assign(`http://localhost:3000/user/dashboard/${user.firstName+"_"+user.lastName.split(" ").filter(e => e).join("_")}`)
+                    window.location.assign(`https://pangasari.herokuapp.com/user/dashboard/${user.firstName+"_"+user.lastName.split(" ").filter(e => e).join("_")}`)
                 }
             })
         })
