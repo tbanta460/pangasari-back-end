@@ -27,7 +27,7 @@ const Login = () => {
         const checkUser = async () => {
             const userId = await Cookies.get('user');
             if(userId !== undefined ) {
-                await Axios.get(`https://pangasari.herokuapp.com/login/${userId}`)
+                await Axios.get(`/login/${userId}`)
                 .then(user => {
                     if(user){
                         const isUser = user.data.data
@@ -80,7 +80,7 @@ const Login = () => {
 
     const requestLogin = async (accessToken, refreshToken) => {
         return new Promise((resolve,reject) => {
-            Axios.post('https://pangasari.herokuapp.com/user/dashboard',{userName}, {
+            Axios.post('/user/dashboard',{userName}, {
                 headers: {
                     'Authorization': `Bearer ${accessToken}`
                 }
