@@ -60,7 +60,7 @@ export const loginPost = async (myData) => {
 		const data = new FormData();
 		await data.append('userName', myData.userName);
 		await data.append('password', myData.password);
-		await Axios.post('/login', data, {
+		await Axios.post('https://pangasari.herokuapp.com/login', data, {
 			headers: {
 				'content-type': 'multipart/form-data'
 			}
