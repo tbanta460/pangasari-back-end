@@ -4,7 +4,6 @@ import Cookies from 'js-cookie'
 import Axios from 'axios';
 
 
-// import {withHooks } from "react-router-dom"
 import { useSelector, useDispatch} from 'react-redux';
 import { setLogin, loginPost } from '../../config/redux/action/setform.js'
 import { getUser } from '../../config/redux/action/getUser.js'
@@ -19,7 +18,6 @@ const Login = () => {
     const [error, setError] = useState("")
     const navigate = useNavigate();
     const { login } = useSelector(state => state.SetForm);
-
     const {userName, password} = login;
     const dispatch = useDispatch();
 
