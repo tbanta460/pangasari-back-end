@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Bagian Back-end dalam membuat aplikasi website untuk murid",
   "main": "index.js",
+  "proxy":"https://pangasari.herokuapp.com".
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build":"cd client && npm run build",
