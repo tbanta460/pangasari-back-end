@@ -60,7 +60,7 @@ export const loginPost = async (myData) => {
 		const data = new FormData();
 		await data.append('userName', myData.userName);
 		await data.append('password', myData.password);
-		await Axios.post('s/login', data, {
+		await Axios.post('/login', data, {
 			headers: {
 				'content-type': 'multipart/form-data'
 			}
