@@ -23,6 +23,8 @@ const bodyEmail = body('email')
 					.isEmail()
 					.notEmpty()
 					.withMessage('Masukkan email Anda')
+					.matches(/^[a-zA-Z][\w]+@[a-z]+(\.)[a-z]{2,3}|^[a-zA-Z]\w+[^\W]/)
+					.withMessage("Masukkan Email Anda")
 					.custom(async (value) => {
 						return await User.getUser(value).then(user => {
 							if(user){
